@@ -6,4 +6,29 @@ export const ProductList = [
         title: "Apollo Running Short",
         price: "50.00"
     },
+    {
+        image: item1, 
+        title: "Apollo Running Short",
+        price: "50.00"
+    },
+    {
+        image: item1, 
+        title: "Apollo Running Short",
+        price: "50.00"
+    },
+    {
+        image: item1, 
+        title: "Apollo Running Short",
+        price: "50.00"
+    },
+    {
+        image: item1, 
+        title: "Apollo Running Short",
+        price: "50.00"
+    },
+    {
+        image: item1, 
+        title: "Apollo Running Short",
+        price: "50.00"
+    },
 ]
