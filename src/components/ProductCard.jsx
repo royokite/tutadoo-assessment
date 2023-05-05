@@ -1,8 +1,12 @@
 import React from "react";
 
- const ProductCard = () => {
+ const ProductCard = ({item}) => {
     return (
-        <p>ProductCard</p>
+        <article>
+            <img src={item.image} alt="product-pic"/>
+            <h3>{item.title}</h3>
+            <p>{item.price}</p>
+        </article>
     );
 }
 
