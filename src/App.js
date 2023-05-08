@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './screens/Home';
 import MainButton from './components/Button';
+import Products from './screens/Products';
 
-export default function App() {
+const App = () => {
   return (
     <section>
-      <Home/>
+      <Products/>
       <MainButton/>
     </section>    
   )
 }
+
+export default App;
