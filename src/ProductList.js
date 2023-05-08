@@ -7,37 +7,44 @@ import item5 from "./images/product-pic5.png"
 export const ProductList = [
     {
         image: item1, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item2, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item3, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item4, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item1, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item3, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
     {
         image: item5, 
-        title: "Apollo Running Short",
+        title: "Apollo",
+        tag: "Running Short",
         price: "50.00"
     },
 ]
