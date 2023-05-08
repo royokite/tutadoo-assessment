@@ -3,9 +3,9 @@ import React from "react";
  const ProductCard = ({item}) => {
     return (
         <article>
-            <img src={item.image} alt="product-pic"/>
-            <h3>{item.title}</h3>
-            <p>{item.price}</p>
+            <img src={item.image} alt="product-pic" className="w-1/2 h-72"/>
+            <p>{item.title}</p>
+            <p className="font-semibold">${item.price}</p>
         </article>
     );
 }

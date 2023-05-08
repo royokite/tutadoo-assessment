@@ -7,7 +7,7 @@ const Products = () => {
     const renderProducts = ProductList.map((item) => <ProductCard item={item} />)
 
     return (
-        <section className="grid lg:grid-cols-3">
+        <section className="grid lg:grid-cols-3 gap-5">
             {renderProducts}
         </section>
     );
