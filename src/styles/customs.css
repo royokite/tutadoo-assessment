@@ -1,0 +1,31 @@
+.btn-custom,
+.btn-custom:hover {
+  background-color: #5ECE7B;
+  border-radius: 0;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav .navbar-nav a {
+  padding: 1.5rem 0;
+}
+
+nav .navbar-nav a.active  {
+  color: #5ECE7B !important;
+  border-bottom: solid 2px #5ECE7B;
+  padding: 1.5rem 0;
+}
+
+/* .navbar-light .navbar-nav .nav-item .nav-link {
+
+  color: orange;
+
+}
+
+.navbar-nav > .active > .a {
+
+  color: red;
+
+} */
