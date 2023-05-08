@@ -1,15 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainButton from './components/Button';
+// import MainButton from './components/Button';
 import Navigation from './components/Navigation';
 import Products from './screens/Products';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
     <section>
-      <Navigation/>
-      <Home/>
-      <Products/>
-      <MainButton/>
+      <Container>
+        <Navigation/>
+        <Products/>
+      </Container>
     </section>    
   )
 }
