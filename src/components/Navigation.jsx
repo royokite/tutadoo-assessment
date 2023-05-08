@@ -1,21 +1,24 @@
-import React from "react";
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { BsCart2 } from "react-icons/bs";
+import { BsCart2 } from 'react-icons/bs';
+import '../styles/customs.css'
 
 const Navigation = () => {
     return (
         <Navbar collapseOnSelect expand="sm" variant="light">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto font-semibold">
             <Nav.Link href="#women">WOMEN</Nav.Link>
             <Nav.Link href="#men">MEN</Nav.Link>
             <Nav.Link href="#kids">KIDS</Nav.Link>
           </Nav>
           <Nav className="me-auto">
-            <img src="/site-logo.png" alt="site-logo"/>
+            <a href="/">
+              <img src="/site-logo.png" alt="site-logo" width={40} height={40}/>
+            </a>
           </Nav>
           <Nav>
               <NavDropdown title="$" id="collasible-nav-dropdown">
