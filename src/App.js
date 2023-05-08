@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import MainButton from './components/Button';
+import Container from 'react-bootstrap/Container';
 import Navigation from './components/Navigation';
 import Products from './screens/Products';
 import { Container } from 'react-bootstrap';
