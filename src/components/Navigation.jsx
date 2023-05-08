@@ -15,7 +15,7 @@ const Navigation = () => {
             <Nav.Link href="#kids">KIDS</Nav.Link>
           </Nav>
           <Nav className="me-auto">
-            <img src={Logo} alt="site-logo"/>
+            <img src="/site-logo.png" alt="site-logo"/>
           </Nav>
           <Nav>
               <NavDropdown title="$" id="collasible-nav-dropdown">
