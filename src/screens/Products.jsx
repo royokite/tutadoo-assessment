@@ -1,10 +1,9 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
-import { ProductList } from "../ProductList";
 
-const Products = () => {
+const Products = ({ ProductList }) => {
 
-  const renderProducts = ProductList.map((item) => <ProductCard item={item} />)
+  const renderProducts = ProductList.map((item) => <ProductCard key={item.id} item={item} />)
 
   return (
     <section>
