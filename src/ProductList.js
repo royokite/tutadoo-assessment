@@ -50,8 +50,8 @@ export const ProductList = [
     {
         id: 7,
         image: item5, 
-        title: "Apollo",
-        tag: "Running Short",
+        title: "Jupiter",
+        tag: "Wayfarer",
         price: "75.00"
     },
 ]

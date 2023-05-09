@@ -7,23 +7,21 @@ const Cart = () => {
 
   const {
     isEmpty,
-    totalUniqueItems,
     items,
     totalItems,
     cartTotal,
     updateItemQuantity,
-    emptyCart,
   } = useCart();
 
   if (isEmpty) {
-    return <h1 className="text-center">Your cart is empty</h1>;
+    return <h1 className="text-center text-green-400">Your cart is empty</h1>;
   }
 
   return (
     <section className="py-4 container">
       <h1>CART</h1>
       <div className="row justify-content-center">
-        <div className="col-12">
+        <div>
           {items.map((item, index) => {
             return (
               <article key={index} className="flex flex-row justify-between border-y-2 py-4">

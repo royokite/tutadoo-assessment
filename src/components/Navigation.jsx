@@ -3,9 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BsCart2 } from 'react-icons/bs';
+import { useCart } from 'react-use-cart';
 import '../styles/customs.css'
 
-const Navigation = () => {
+const Navigation = ({ handleShow }) => {
+
+    const { totalItems } = useCart();
+
     return (
         <Navbar collapseOnSelect expand="sm" variant="light">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,11 +26,16 @@ const Navigation = () => {
           </Nav>
           <Nav>
               <NavDropdown title="$" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">$ USD</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">€ Euro</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">¥ JPY</NavDropdown.Item>
+                <NavDropdown.Item href="#USD" className='font-bold text-lg text-center'>$ USD</NavDropdown.Item>
+                <NavDropdown.Item href="#Euro" className='font-bold text-lg text-center'>€ Euro</NavDropdown.Item>
+                <NavDropdown.Item href="#Yen" className='font-bold text-lg text-center'>¥ JPY</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/cart"><BsCart2/></Nav.Link>
+              <Nav.Link href="" className='relative' onClick={handleShow}>
+                <BsCart2/>
+                <span className="position-absolute top-6 -right-2 translate-middle badge rounded-pill bg-dark p-1 pb-2" style={{width: '1rem', height: '1rem'}}>
+                  {totalItems}
+                </span>
+                </Nav.Link>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
