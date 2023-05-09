@@ -52,6 +52,6 @@ export const ProductList = [
         image: item5, 
         title: "Apollo",
         tag: "Running Short",
-        price: "50.00"
+        price: "75.00"
     },
 ]

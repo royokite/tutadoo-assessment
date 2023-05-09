@@ -1,12 +1,15 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { useParams } from 'react-router-dom';
+import { useCart } from "react-use-cart";
 import "../styles/customs.css";
 
 const EachProduct = ({ ProductList }) => {
 
   const { id } = useParams();
   const product = ProductList.find(item => item.id === Number(id));
+  const { addItem } = useCart();
+  const handleAdd = () => addItem(product);
 
   return (
     <section className="flex my-20">
@@ -39,16 +42,16 @@ const EachProduct = ({ ProductList }) => {
         <div>
           <span className="font-bold text-xl">COLOR:</span> <br />   
           <div className="inline-flex" role="group">
-            <button type="button" className="px-4 py-4 m-1 ms-0 w-15 bg-gray-300 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
-            <button type="button" className="px-4 py-4 m-1 w-15 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
-            <button type="button" className="px-4 py-4 m-1 w-15 bg-green-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+            <button type="button" className="p-4 m-1 ms-0 w-15 bg-gray-300 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+            <button type="button" className="py4 m-1 w-15 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+            <button type="button" className="p-4 m-1 w-15 bg-green-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
           </div>
         </div>
         <div className="flex flex-column">
           <span className="font-bold text-xl">PRICE:</span>  
           <span className="font-bold text-xl my-4">{product.price}</span>
         </div>
-        <Button variant="custom">ADD TO CART</Button>
+        <Button variant="custom" onClick={handleAdd}>ADD TO CART</Button>
         <p className="my-4 font-semibold">Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.</p>
 
       </aside>

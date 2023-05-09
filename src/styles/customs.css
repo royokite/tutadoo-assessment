@@ -12,20 +12,7 @@ nav .navbar-nav a {
   padding: 1.5rem 0;
 }
 
-nav .navbar-nav a.active  {
-  color: #5ECE7B !important;
+nav .navbar-nav a.nav-link.active  {
+  color: #5ECE7B;
   border-bottom: solid 2px #5ECE7B;
-  padding: 1.5rem 0;
 }
-
-/* .navbar-light .navbar-nav .nav-item .nav-link {
-
-  color: orange;
-
-}
-
-.navbar-nav > .active > .a {
-
-  color: red;
-
-} */

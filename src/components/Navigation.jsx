@@ -26,7 +26,7 @@ const Navigation = () => {
                 <NavDropdown.Item href="#action/3.2">€ Euro</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">¥ JPY</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#cart"><BsCart2/></Nav.Link>
+              <Nav.Link href="/cart"><BsCart2/></Nav.Link>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
