@@ -8,9 +8,9 @@ const Products = ({ ProductList }) => {
   return (
     <section>
       <h2 className="text-4xl font-normal my-5 py-4">Category name</h2>
-      <artcle className="grid lg:grid-cols-3 gap-5">
+      <article className="grid lg:grid-cols-3 gap-5">
         {renderProducts}
-      </artcle>
+      </article>
     </section>
   );
 }

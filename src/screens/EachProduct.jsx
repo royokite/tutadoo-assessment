@@ -43,7 +43,7 @@ const EachProduct = ({ ProductList }) => {
           <span className="font-bold text-xl">COLOR:</span> <br />   
           <div className="inline-flex" role="group">
             <button type="button" className="p-4 m-1 ms-0 w-15 bg-gray-300 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
-            <button type="button" className="py4 m-1 w-15 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+            <button type="button" className="p-4 m-1 w-15 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
             <button type="button" className="p-4 m-1 w-15 bg-green-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
           </div>
         </div>
@@ -51,7 +51,7 @@ const EachProduct = ({ ProductList }) => {
           <span className="font-bold text-xl">PRICE:</span>  
           <span className="font-bold text-xl my-4">{product.price}</span>
         </div>
-        <Button variant="custom" onClick={handleAdd}>ADD TO CART</Button>
+        <Button variant="custom" onClick={handleAdd} className="w-full">ADD TO CART</Button>
         <p className="my-4 font-semibold">Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.</p>
 
       </aside>
