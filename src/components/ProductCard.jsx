@@ -10,13 +10,13 @@ import { useCart } from "react-use-cart";
   const { inCart } = useCart();
 
   return (
-    <article onClick={handleClick} className={`p-3 ${inCart(item.id) ? "product-card" : ""}`}>
+    <article onClick={handleClick} className={`p-3 ${inCart(item.id) ? "product-card" : ""}`} style={{ pointerEvents: `${(item.id === 3) ? 'none' : ''}`}}>
       <div className="relative">
         <img src={item.image} alt="product-pic" className="w-full h-68"/>
         { inCart(item.id) && <img src={Incart} alt="incart-icon" className="position-absolute -bottom-10 right-0 translate-middle" style={{width: '2.5rem', height: '2.5rem'}}/>}
       </div>
-      <p>{item.title} {item.tag}</p>
-      <p className="font-semibold">${item.price}</p>
+      <p className={`${(item.id === 3) ? "text-slate-300" : ""}`}>{item.title} {item.tag}</p>
+      <p className={`font-semibold ${(item.id === 3) ? "text-slate-300" : ""}`}>${item.price}</p>
     </article>
   );
 }

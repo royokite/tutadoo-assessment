@@ -12,14 +12,16 @@ const EachProduct = ({ ProductList }) => {
   const handleAdd = () => addItem(product);
 
   return (
-    <section className="flex my-20">
-      <article>
-        <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
-        <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
-        <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
-      </article>
-      <img src={product.image} alt="item-one" style={{width: '550px', height: '450px'}} className="ml-8 mr-20"/>
-      <aside className="w-72">
+    <section className="flex flex-row my-20 flex-wrap">
+      <div className="flex flex-row flex-wrap">
+        <article className="flex flex-column sm:flex-row">
+          <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
+          <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
+          <img src={product.image} alt="item-one" width={100} height={100} className="mb-4"/>
+        </article>
+        <img src={product.image} alt="item-one" style={{width: '30rem', height: '28rem'}} className="ml-8 mr-20"/>
+      </div>
+      <aside className="w-72 flex flex-column">
         <span className="font-bold text-3xl">{product.title}</span> <br />
         <span className="text-3xl">{product.tag}</span> <br />
         <div className="mt-4">

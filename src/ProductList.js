@@ -3,6 +3,7 @@ import item2 from "./images/product-pic2.png"
 import item3 from "./images/product-pic3.png"
 import item4 from "./images/product-pic4.png"
 import item5 from "./images/product-pic5.png"
+import item6 from "./images/product-pic6.png"
 
 export const ProductList = [
     {
@@ -21,7 +22,7 @@ export const ProductList = [
     },
     {
         id: 3,
-        image: item3, 
+        image: item6, 
         title: "Apollo",
         tag: "Running Short",
         price: "50.00"

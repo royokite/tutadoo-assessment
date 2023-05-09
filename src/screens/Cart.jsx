@@ -85,6 +85,7 @@ const Cart = () => {
         </div>
         <div className="flex flex-column">
           <table style={{width: '15%'}}>
+            <tbody>
             <tr>
               <td>Tax 21%:</td>
               <th>${(cartTotal * 0.21).toFixed(2)}</th>
@@ -97,6 +98,7 @@ const Cart = () => {
               <td>Total:</td>
               <th>${(cartTotal).toFixed(2)}</th>
             </tr>
+            </tbody>
           </table>
           <div style={{width: '20%'}} className="mt-3">
             <Button variant="custom">ORDER</Button>
