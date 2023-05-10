@@ -24,13 +24,13 @@ const Navigation = ({ handleShow }) => {
               <img src="/site-logo.png" alt="site-logo" width={40} height={40}/>
             </a>
           </Nav>
-          <Nav>
+          <Nav className='lg:mr-5'>
               <NavDropdown title="$" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#USD" className='font-bold text-lg text-center'>$ USD</NavDropdown.Item>
-                <NavDropdown.Item href="#Euro" className='font-bold text-lg text-center'>€ Euro</NavDropdown.Item>
-                <NavDropdown.Item href="#Yen" className='font-bold text-lg text-center'>¥ JPY</NavDropdown.Item>
+                <NavDropdown.Item href="#USD" className='font-bold text-md text-center'>$ USD</NavDropdown.Item>
+                <NavDropdown.Item href="#Euro" className='font-bold text-md text-center'>€ Euro</NavDropdown.Item>
+                <NavDropdown.Item href="#Yen" className='font-bold text-md text-center'>¥ JPY</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="" className='relative' onClick={handleShow}>
+              <Nav.Link href="" className='relative w-fit' onClick={handleShow}>
                 <BsCart2/>
                 <span className="position-absolute top-6 -right-2 translate-middle badge rounded-pill bg-dark p-1 pb-2" style={{width: '1rem', height: '1rem'}}>
                   {totalItems}

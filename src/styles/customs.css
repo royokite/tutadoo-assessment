@@ -8,12 +8,12 @@
 }
 
 nav .navbar-nav a {
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
 }
 
 nav .navbar-nav a.nav-link.active  {
   color: #5ECE7B;
-  border-bottom: solid 4px #5ECE7B;
+  border-bottom: solid 2px #5ECE7B;
 }
 
 .dropdown-item:active {
@@ -22,11 +22,11 @@ nav .navbar-nav a.nav-link.active  {
 
 div.modal-content {
   height: min-content;
-  width: 350px;
+  width: 19rem;
   margin: auto;
   border-radius: 0%;
   margin-top: 3.5rem;
-  right: 5rem;
+  /* right: 5rem; */
 }
 
 div.modal-dialog {
