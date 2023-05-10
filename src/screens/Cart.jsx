@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "react-use-cart";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
 import Button from "react-bootstrap/Button";
 import "../styles/customs.css";
 
@@ -32,7 +33,7 @@ const Cart = () => {
                   <div className="mt-2">
                     <span className="font-bold text-sm">SIZE:</span> <br />       
                     <div role="group" className="inline-flex justify-between mb-2">
-                      <button type="button" className="px-3 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
+                      {/* <button type="button" className="px-3 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
                         XS
                       </button>
                       <button type="button" className="px-3 py-1 ml-1 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
@@ -43,7 +44,53 @@ const Cart = () => {
                       </button>
                       <button type="button" className="px-3 py-1 ml-1 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
                         L
-                      </button>
+                      </button> */}
+                      <div>
+                        <input type="radio" name="option" id="xs2" className="peer hidden" />
+                        <label
+                          htmlFor="xs2"
+                          className="block cursor-pointer select-none border-2 border-black px-3 py-1 text-xs ml-0 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                        >
+                          XS
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          name="option"
+                          id="s2"
+                          className="peer hidden"
+                        />
+                        <label
+                          htmlFor="s2"
+                          className="block cursor-pointer select-none border-2 border-black px-3 py-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                        >
+                          S
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="option" id="m2" className="peer hidden" />
+                        <label
+                          htmlFor="m2"
+                          className="block cursor-pointer select-none border-2 border-black px-3 py-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                        >
+                          M
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          name="option"
+                          id="l2"
+                          className="peer hidden"
+                        />
+                        <label
+                          htmlFor="l2"
+                          className="block cursor-pointer select-none border-2 border-black px-3 py-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                        >
+                          L
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -58,7 +105,7 @@ const Cart = () => {
                 <aside className="flex flex-row">
                   <div className="text-xl font-light flex flex-column mr-4 justify-between">
                     <button
-                      className="border border-black border-3 px-2 py-1"
+                      className="border border-black border-2 px-2 py-1"
                       onClick={() =>
                         updateItemQuantity(item.id, item.quantity + 1)
                       }
@@ -67,7 +114,7 @@ const Cart = () => {
                     </button>
                     <span className="text-md font-semibold text-center">{item.quantity}</span>
                     <button
-                      className="border border-black border-3 px-2 py-1"
+                      className="border border-black border-2 px-2 py-1"
                       onClick={() =>
                         updateItemQuantity(item.id, item.quantity - 1)
                       }
@@ -75,8 +122,12 @@ const Cart = () => {
                       -
                     </button>
                   </div>
-                  <div>
-                    <img src={item.image} style={{  width: "12rem" ,height: "100%" }} alt={item.title}/>
+                  <div className="relative">
+                    <img src={item.image} alt={item.title} className="cart-image"/>
+                    <div className="flex flex-nowrap absolute bottom-1 -right-4 translate-middle">
+                      <AiOutlineLeft className="text-white text-xl bg-black m-1 hover:cursor-pointer"/>
+                      <AiOutlineRight className="text-white text-xl bg-black m-1 hover:cursor-pointer"/>
+                    </div>
                   </div>
                 </aside>
               </article>

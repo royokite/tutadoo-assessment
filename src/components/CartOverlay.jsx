@@ -31,7 +31,7 @@ const CartOverlay = ({ show, handleClose }) => {
                       <div className="mt-2">
                         <span className="text-xs">Size:</span> <br />       
                         <div role="group" className="inline-flex justify-between">
-                          <button type="button" className="px-1 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
+                          {/* <button type="button" className="px-1 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
                             XS
                           </button>
                           <button type="button" className="px-2 py-1 ml-0.5 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
@@ -42,22 +42,69 @@ const CartOverlay = ({ show, handleClose }) => {
                           </button>
                           <button type="button" className="px-2 py-1 ml-0.5 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
                             L
-                          </button>
+                          </button> */}
+                          <div>
+                            <input type="radio" name="option" id="xs3" className="peer hidden" />
+                            <label
+                              htmlFor="xs3"
+                              className="block cursor-pointer select-none border-2 border-black px-1 text-xs ml-0 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                            >
+                              XS
+                            </label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              name="option"
+                              id="s3"
+                              className="peer hidden"
+                              defaultChecked
+                            />
+                            <label
+                              htmlFor="s3"
+                              className="block cursor-pointer select-none border-2 border-black px-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                            >
+                              S
+                            </label>
+                          </div>
+                          <div>
+                            <input type="radio" name="option" id="m" className="peer hidden" />
+                            <label
+                              htmlFor="m3"
+                              className="block cursor-pointer select-none border-2 border-black px-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                            >
+                              M
+                            </label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              name="option"
+                              id="l3"
+                              className="peer hidden"
+                            />
+                            <label
+                              htmlFor="l3"
+                              className="block cursor-pointer select-none border-2 border-black px-1 text-xs ml-1 text-center peer-checked:bg-black peer-checked:font-bold peer-checked:text-white hover:border-green-400"
+                            >
+                              L
+                            </label>
+                          </div>
                         </div>
                       </div>
                       <div>
                         <span className="text-xs">Color:</span> <br />   
                         <div className="inline-flex" role="group">
-                          <button type="button" className="p-2 m-1 ms-0 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
-                          <button type="button" className="p-2 m-1 w-15 bg-sky-500 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
-                          <button type="button" className="p-2 m-1 w-15 bg-orange-500 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+                          <button type="button" className="p-2 mx-1 ms-0 bg-gray-800 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+                          <button type="button" className="p-2 mx-1 bg-sky-500 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
+                          <button type="button" className="p-2 mx-1 bg-orange-500 border border-2 border-black focus:z-10 focus:ring-2 focus:ring-green-400"></button>
                         </div>
                       </div>
                     </div>
                     <aside className="flex flex-row">
                       <div className="flex flex-column mr-1 justify-between">
                         <button
-                          className="border border-black border-3 px-1"
+                          className="border border-black border-2 px-1"
                           onClick={() =>
                             updateItemQuantity(item.id, item.quantity + 1)
                           }
@@ -66,7 +113,7 @@ const CartOverlay = ({ show, handleClose }) => {
                         </button>
                         <span className="text-lg font-semibold text-center">{item.quantity}</span>
                         <button
-                          className="border border-black border-3 px-2"
+                          className="border border-black border-2 px-2"
                           onClick={() =>
                             updateItemQuantity(item.id, item.quantity - 1)
                           }

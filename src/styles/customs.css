@@ -13,7 +13,21 @@ nav .navbar-nav a {
 
 nav .navbar-nav a.nav-link.active  {
   color: #5ECE7B;
-  border-bottom: solid 2px #5ECE7B;
+  border-bottom: solid 3px #5ECE7B;
+  /* padding-bottom: 18px; */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  z-index: 1;
+  border-radius: 0px;
 }
 
 .dropdown-item:active {
@@ -25,8 +39,9 @@ div.modal-content {
   width: 19rem;
   margin: auto;
   border-radius: 0%;
-  margin-top: 3.5rem;
-  /* right: 5rem; */
+  margin-top: 1.5rem;
+  border: 0px;
+  right: 1.5rem;
 }
 
 div.modal-dialog {
@@ -38,5 +53,32 @@ div.modal-dialog {
 }
 
 .modal-backdrop {
-  top: 5.5rem;
+  top: 3.5rem;
+}
+
+.show.dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.cart-image {
+  width: 12rem;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-image {
+    height: 50%;
+  }
+}
+
+.badge {
+  height: 1rem;
+  width: 1rem;
+  right: -8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .badge {
+    right: -15px;
+  }
 }

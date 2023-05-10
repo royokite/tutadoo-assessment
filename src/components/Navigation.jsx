@@ -24,7 +24,7 @@ const Navigation = ({ handleShow }) => {
               <img src="/site-logo.png" alt="site-logo" width={40} height={40}/>
             </a>
           </Nav>
-          <Nav className='lg:mr-5'>
+          <Nav className='lg:mr-5 lg:items-center'>
               <NavDropdown title="$" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#USD" className='font-bold text-md text-center'>$ USD</NavDropdown.Item>
                 <NavDropdown.Item href="#Euro" className='font-bold text-md text-center'>€ Euro</NavDropdown.Item>
@@ -32,10 +32,10 @@ const Navigation = ({ handleShow }) => {
               </NavDropdown>
               <Nav.Link href="" className='relative w-fit' onClick={handleShow}>
                 <BsCart2/>
-                <span className="position-absolute top-6 -right-2 translate-middle badge rounded-pill bg-dark p-1 pb-2" style={{width: '1rem', height: '1rem'}}>
+                <span className="absolute top-2 translate-middle badge rounded-pill bg-dark p-1">
                   {totalItems}
                 </span>
-                </Nav.Link>
+              </Nav.Link>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
