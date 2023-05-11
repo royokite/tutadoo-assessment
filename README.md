@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+[<img src="./public/site-logo.png" width="100"/>](site-logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TUTADOO Frontend React Assessment
 
-## Available Scripts
+## By: ROY OKITE
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This is the frontend react application for a clothing ecommerce website. Green Commerce is the name of the website, which has been designed to display a page of all the products available with details including the image, name and price as well as colour and size options with a cart functionality to complete it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application meets the following requirements:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- It is a single page application.
+- It is Intuitive and has an easy to follow layout.
+- It is mobile responsive to fit smaller device screens.
+- It utilises pages and components for code organization and resusability.
+- The application employs the use of client-side routing for page to page navigation.
+  <br />
+  <br />
 
-### `npm test`
+## Deliverables
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app utilizes React, Tailwind CSS for styling and Javascript/JSX for interactivity.
 
-### `npm run build`
+A user is able to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- View product information on available products.
+  <br /> <br />
+  ![Products Sample](./src/images/sc-products.png)
+  <br /> <br />
+- View each item with more details such as the size and colour options.
+  <br /> <br />
+  ![Each Product Sample](./src/images/sc-product.png)
+  <br /> <br />
+- View all items currently in the cart.
+  <br /> <br />
+  ![Cart Sample](./src/images/sc-cart.png)
+  <br /> <br />
+- Menu cart overlay.
+  <br /> <br />
+  ![Overlay Sample](./src/images/sc-overlay.png)
+  <br /> <br />
+- Menu currency dropdown.
+  <br /> <br />
+  ![Dropdown Sample](./src/images/sc-currency.png)
+  <br /> <br />
+- Mobile samples.
+  <br /> <br />
+  ![Products Mobile Sample](./src/images/sc-products-mobile.png)
+  ![Each Product Mobile Sample](./src/images/sc-product-mobile.png)
+  ![Cart Mobile Sample](./src/images/sc-cart-mobile.png)
+  ![Overlay Mobile Sample](./src/images/sc-overlay-mobile.png)
+  <br /> <br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project has been developed locally and run using npm. Additional packages have been used to improve
+the look and feel of the site and give it a clean and polished look.
 
-### `npm run eject`
+You may clone and run the code locally to interact with the current iteraction of the assessment.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Closing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This react app took a few days to develop to closely match the given figma design. More interactivity and modifications will be made overtime even after submission to polish the style, data and components available on the app where necessary.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Sample code to design each product card:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+ const ProductCard = ({item}) => {
+  const navigate = useNavigate();
+  const handleClick = () => navigate(`/products/${item.id}`);
+  const { inCart } = useCart();
 
-## Learn More
+  return (
+    <article onClick={handleClick} className={`p-3 hover:cursor-pointer ${inCart(item.id) ? "product-card" : ""}`} style={{ pointerEvents: `${(item.id === 3) ? 'none' : ''}`}}>
+      <div className="relative">
+        <img src={item.image} alt="product-pic" className="w-full h-68"/>
+        { inCart(item.id) && <img src={Incart} alt="incart-icon" className="position-absolute -bottom-10 right-0 translate-middle" style={{width: '2.5rem', height: '2.5rem'}}/>}
+      </div>
+      <p className={`${(item.id === 3) ? "text-slate-300" : ""}`}>{item.title} {item.tag}</p>
+      <p className={`font-semibold ${(item.id === 3) ? "text-slate-300" : ""}`}>${item.price}</p>
+    </article>
+  );
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Closing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All the information and resources used have been sourced from publicly available resources as well as the aforementioned figma design file. This is a project aimed to train development as well as complete
+a front end react assesment by Tutadoo.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## This project aims to fulfill requirements for a Frontend React Assessment.
