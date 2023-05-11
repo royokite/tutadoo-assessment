@@ -33,18 +33,6 @@ const Cart = () => {
                   <div className="mt-2">
                     <span className="font-bold text-sm">SIZE:</span> <br />       
                     <div role="group" className="inline-flex justify-between mb-2">
-                      {/* <button type="button" className="px-3 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                        XS
-                      </button>
-                      <button type="button" className="px-3 py-1 ml-1 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                        S
-                      </button>
-                      <button type="button" className="px-3 py-1 ml-1 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                        M
-                      </button>
-                      <button type="button" className="px-3 py-1 ml-1 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                        L
-                      </button> */}
                       <div>
                         <input type="radio" name="option" id="xs2" className="peer hidden" />
                         <label

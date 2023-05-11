@@ -27,19 +27,6 @@ const EachProduct = ({ ProductList }) => {
         <div>
           <span className="font-bold text-md">SIZE:</span> <br />       
           <div role="group" className="inline-flex w-full justify-between">
-            {/* <button type="button" className="px-3 py-1 ms-0 text-lg font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-              XS
-            </button>
-            <button type="button" className="px-3 py-1 ml-1 text-lg font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-              S
-            </button>
-            <button type="button" className="px-3 py-1 ml-1 text-lg font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-              M
-            </button>
-            <button type="button" className="px-3 py-1 ml-1 text-lg font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-              L
-            </button> */}
-
             <div>
               <input type="radio" name="option" id="xs" className="peer hidden" />
               <label
@@ -102,10 +89,10 @@ const EachProduct = ({ ProductList }) => {
           <span className="font-bold text-xl my-2">${product.price}</span>
         </div>
         <Button variant="custom" onClick={handleAdd} className="w-full mt-2">ADD TO CART</Button>
-        <p className="my-4 font-semibold text-sm">Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.</p>
-
-      </aside>
-      
+        <p className="my-4 font-semibold text-sm">
+          Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.
+        </p>
+      </aside>      
     </section>
   );
 }

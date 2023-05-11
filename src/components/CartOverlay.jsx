@@ -31,18 +31,6 @@ const CartOverlay = ({ show, handleClose }) => {
                       <div className="mt-2">
                         <span className="text-xs">Size:</span> <br />       
                         <div role="group" className="inline-flex justify-between">
-                          {/* <button type="button" className="px-1 py-1 ms-0 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                            XS
-                          </button>
-                          <button type="button" className="px-2 py-1 ml-0.5 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                            S
-                          </button>
-                          <button type="button" className="px-2 py-1 ml-0.5 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                            M
-                          </button>
-                          <button type="button" className="px-2 py-1 ml-0.5 text-xs font-medium border border-2 border-black hover:bg-green-400 hover:text-white focus:z-10 focus:ring-black focus:bg-black focus:text-white">
-                            L
-                          </button> */}
                           <div>
                             <input type="radio" name="option" id="xs3" className="peer hidden" />
                             <label

@@ -14,7 +14,6 @@ nav .navbar-nav a {
 nav .navbar-nav a.nav-link.active  {
   color: #5ECE7B;
   border-bottom: solid 3px #5ECE7B;
-  /* padding-bottom: 18px; */
 }
 
 .dropdown {
