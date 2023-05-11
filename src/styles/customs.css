@@ -26,6 +26,7 @@ nav .navbar-nav a.nav-link.active  {
   display: none;
   position: absolute;
   min-width: 100px;
+  max-width: 100px;
   z-index: 1;
   border-radius: 0px;
 }
@@ -80,5 +81,11 @@ div.modal-dialog {
 @media only screen and (max-width: 768px) {
   .badge {
     right: -15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .order {
+    width: 150px;
   }
 }

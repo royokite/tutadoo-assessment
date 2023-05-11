@@ -83,6 +83,7 @@ const Cart = () => {
                           name="option"
                           id="l2"
                           className="peer hidden"
+                          defaultChecked
                         />
                         <label
                           htmlFor="l2"
@@ -152,7 +153,7 @@ const Cart = () => {
             </tbody>
           </table>
           <div style={{width: '20%'}} className="mt-2">
-            <Button variant="custom" className="w-full">ORDER</Button>
+            <Button variant="custom" className="lg:w-full order">ORDER</Button>
           </div>
         </div>
 

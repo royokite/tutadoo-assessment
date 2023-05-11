@@ -78,6 +78,7 @@ const EachProduct = ({ ProductList }) => {
                 name="option"
                 id="l"
                 className="peer hidden"
+                defaultChecked
               />
               <label
                 htmlFor="l"

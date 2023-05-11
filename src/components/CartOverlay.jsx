@@ -57,8 +57,7 @@ const CartOverlay = ({ show, handleClose }) => {
                               type="radio"
                               name="option"
                               id="s3"
-                              className="peer hidden"
-                              defaultChecked
+                              className="peer hidden"                              
                             />
                             <label
                               htmlFor="s3"
@@ -82,6 +81,7 @@ const CartOverlay = ({ show, handleClose }) => {
                               name="option"
                               id="l3"
                               className="peer hidden"
+                              defaultChecked
                             />
                             <label
                               htmlFor="l3"
